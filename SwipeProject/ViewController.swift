@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var swipeLabel: UILabel!
     var labelValue: Int = 0
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +28,13 @@ class ViewController: UIViewController {
     
 
     @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
-        labelValue = labelValue+1
-        
+        labelValue += 1
+        swipeLabel.text = String(labelValue)
     }
     
-    
     @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
-        
         labelValue -= 1
+        swipeLabel.text = String(labelValue)
     }
     
 
