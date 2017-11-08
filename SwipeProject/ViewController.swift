@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var labelValue: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,19 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+        labelValue = labelValue+1
+        
+    }
+    
+    
+    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+        
+        labelValue -= 1
+    }
+    
 
 
 }
